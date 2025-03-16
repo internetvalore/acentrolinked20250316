@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contattaci - Acentro Services">
+  <Header />
+  
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Contattaci</h1>
+        <p>Siamo a tua disposizione per qualsiasi informazione o richiesta</p>
+      </div>
+    </section>
+    
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <h2>Sede di Milano</h2>
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-detail">
+                <h3>Indirizzo</h3>
+                <p>Acentro Services SRL<br>
+                Viale C. Espinasse 67<br>
+                20156 MILANO (MI)</p>
+              </div>
+              
+              <div class="contact-detail">
+                <h3>Telefono</h3>
+                <p><a href="tel:0238003661">02.38003661</a><br>
+                <a href="tel:0238002547">02.38002547</a></p>
+              </div>
+              
+              <div class="contact-detail">
+                <h3>Fax</h3>
+                <p>02.38004535</p>
+              </div>
+              
+              <div class="contact-detail">
+                <h3>Email</h3>
+                <p><a href="mailto:acentroservices@acentroservices.it">acentroservices@acentroservices.it</a></p>
+              </div>
+              
+              <div class="contact-detail">
+                <h3>Orari</h3>
+                <p>Lunedì – Venerdì<br>
+                9.00-13.00 / 14.00-18.00</p>
+              </div>
+            </div>
+            <div class="contact-card-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.9551380861!2d9.1518!3d45.4985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c0f95b5b7f89%3A0x3e1e6c2f2e9c1e1!2sViale%20Carlo%20Espinasse%2C%2067%2C%2020156%20Milano%20MI!5e0!3m2!1sit!2sit!4v1650000000000!5m2!1sit!2sit" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    min-height: 100vh;
+  }
+  
+  .contact-hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .contact-hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-info-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .contact-card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-card-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .contact-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .contact-detail {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-detail:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contact-detail h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-detail p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .contact-detail a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-detail a:hover {
+    color: var(--accent-color);
+  }
+  
+  .contact-card-map {
+    width: 100%;
+    height: 250px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .contact-hero p {
+      font-size: 1rem;
+    }
+    
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

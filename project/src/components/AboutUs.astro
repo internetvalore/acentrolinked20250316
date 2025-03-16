@@ -1,0 +1,101 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="chi-siamo" class="section about-section">
+  <div class="container">
+    <div class="section-title animate-on-scroll">
+      <h2>{t('about.title')}</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text animate-on-scroll from-left">
+        <h3>{t('about.subtitle')}</h3>
+        <p>{t('about.intro')}</p>
+        <p>{t('about.history')}</p>
+        <ul class="values-list">
+          <li><strong>{t('about.values.economy.title')}:</strong> {t('about.values.economy.desc')}</li>
+          <li><strong>{t('about.values.attention.title')}:</strong> {t('about.values.attention.desc')}</li>
+          <li><strong>{t('about.values.speed.title')}:</strong> {t('about.values.speed.desc')}</li>
+          <li><strong>{t('about.values.effectiveness.title')}:</strong> {t('about.values.effectiveness.desc')}</li>
+          <li><strong>{t('about.values.professionalism.title')}:</strong> {t('about.values.professionalism.desc')}</li>
+        </ul>
+        <p>{t('about.mission')}</p>
+      </div>
+      <div class="about-image animate-on-scroll from-right">
+        <div class="image-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+            <rect width="400" height="300" fill="#e1e8ed"/>
+            <circle cx="200" cy="100" r="60" fill="#0066a1"/>
+            <rect x="140" y="170" width="120" height="130" fill="#0066a1"/>
+            <text x="200" y="240" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
+              {t('about.since')}
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background-color: white;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .about-text {
+    flex: 3;
+  }
+  
+  .about-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .values-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .values-list li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .about-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column-reverse;
+    }
+    
+    .about-image {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

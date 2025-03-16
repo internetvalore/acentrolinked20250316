@@ -1,0 +1,226 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Chamber of Commerce Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Chamber of Commerce Practices" 
+    description="Complete solutions for all Chamber of Commerce practices"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Administrative practice agencies in Milan, including <strong>Acentro Services</strong>, offer a wide range of services related to the <strong>Chamber of Commerce</strong>. 
+          Acentro Services provides support for managing formalities and compliance with public administration entities.
+        </p>
+        <p>
+          Here is a detailed list of the practices offered:
+        </p>
+      </div>
+      
+      <div class="service-boxes">
+        <ServiceDetailBox 
+          title="Smart Card and Business Key Request" 
+          description="Complete assistance for obtaining and renewing digital signature devices."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Change, Termination, and Start of Activity Communication" 
+          description="Management of mandatory communications related to business activity changes."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Certificates, Reports, Protests" 
+          description="Obtaining reports without certification value with main company data, and signed, stamped, and duty-stamped certificates attesting registration in the Business Register."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="PEC Request and Renewal" 
+          description="Assistance for activation and renewal of Certified Email, mandatory for companies."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Digital and Paper Copies of Acts/Financial Statements" 
+          description="Production of simple or duty-stamped copies of filed acts and financial statements in digital and/or paper format."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Trademark and Patent Filing" 
+          description="Complete assistance for registration and filing of national trademarks and patents."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Business Register Suspended Practices Resolution" 
+          description="Support for resolving suspended practices at the Business Register."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Book Authentication" 
+          description="Assistance for authenticating mandatory social and accounting books."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Financial Statement Filing" 
+          description="Complete support for filing annual financial statements with the Chamber of Commerce."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Annual Fee Payment Regularization" 
+          description="Assistance for regularizing Chamber of Commerce annual fee payments."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Social Cooperative Financial Statement Filing" 
+          description="Specific support for filing financial statements of social cooperatives."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Individual Companies PEC Communication" 
+          description="Assistance for communicating PEC to the Business Register for individual companies."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="National Environmental Managers Register Registration" 
+          description="Complete assistance for managing registration requests to the National Environmental Managers Register (A.N.G.A.), established by Legislative Decree 152/06."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="National Trademark Registration" 
+          description="Support for registering trademarks at the national level."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Beneficial Owner Communication" 
+          description="Assistance for submitting the 'beneficial owner' to the competent Business Register, mandatory since October 10, 2023."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Business Lists" 
+          description="Provision of company lists with the possibility to select specific parameters, such as geographical location or legal nature of the company."
+          icon="/images/service-icon-1.svg"
+        />
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Related Digital Services</h3>
+        <p>
+          Acentro Services also offers digital services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>, 
+          which are useful tools for simplifying operational processes related to communication with the Chamber of Commerce.
+        </p>
+        
+        <h3>DIGIPRAM: The Management Software for Administrative Practices</h3>
+        <p>
+          Additionally, Acentro Services provides DIGIPRAM, a management software designed for administrative practice agencies, 
+          which facilitates practice management and offers features such as document management.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your Chamber of Commerce practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify your administrative requirements.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

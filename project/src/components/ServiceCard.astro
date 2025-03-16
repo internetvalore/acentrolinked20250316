@@ -1,0 +1,147 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link?: string;
+}
+
+const { title, description, icon, link = "#" } = Astro.props;
+---
+
+<a href={link} class="service-card-link">
+  <div class="service-card">
+    <div class="service-icon">
+      <img src={icon} alt={title}>
+    </div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="service-card-action">
+      <span class="read-more">Scopri di più</span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }<boltAction type="file" filePath="src/components/ServiceCard.astro">---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link?: string;
+}
+
+const { title, description, icon, link = "#" } = Astro.props;
+---
+
+<a href={link} class="service-card-link">
+  <div class="service-card">
+    <div class="service-icon">
+      <img src={icon} alt={title}>
+    </div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="service-card-action">
+      <span class="read-more">Scopri di più</span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-icon img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .service-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .service-card-action {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .read-more {
+    color: var(--accent-color);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .service-card:hover .read-more {
+    color: var(--primary-color);
+  }
+  
+  .service-card:hover .read-more::after {
+    transform: translateX(5px);
+  }
+</style>

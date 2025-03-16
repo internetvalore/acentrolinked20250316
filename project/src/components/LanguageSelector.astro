@@ -1,0 +1,56 @@
+---
+import { languages } from '../i18n/ui';
+
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.startsWith('/en') ? 'en' : 'it';
+---
+
+<div class="language-selector">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a 
+      href={currentPath.replace(/^\/(en\/)?/, `/${lang === 'it' ? '' : lang + '/'}`) || '/'} 
+      class={`lang-link ${currentLang === lang ? 'active' : ''}`}
+    >
+      {label}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-selector {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .lang-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .lang-link:hover {
+    background-color: var(--light-bg);
+    color: var(--accent-color);
+  }
+  
+  .lang-link.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .lang-link.active:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .language-selector {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  }
+</style>

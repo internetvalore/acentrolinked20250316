@@ -1,0 +1,176 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="servizi" class="section">
+  <div class="container">
+    <div class="section-title animate-on-scroll">
+      <h2>{t('services.title')}</h2>
+    </div>
+    <div class="services-grid">
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-camera-commercio`} class="service-card animate-on-scroll from-left">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.chamber')} class="mascot-icon">
+        </div>
+        <h3>{t('services.chamber')}</h3>
+        <p>{t('services.chamber.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-agenzia-entrate`} class="service-card animate-on-scroll from-right">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.revenue')} class="mascot-icon">
+        </div>
+        <h3>{t('services.revenue')}</h3>
+        <p>{t('services.revenue.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-inps-inail`} class="service-card animate-on-scroll from-left">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.inps')} class="mascot-icon">
+        </div>
+        <h3>{t('services.inps')}</h3>
+        <p>{t('services.inps.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-equitalia`} class="service-card animate-on-scroll from-right">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.equitalia')} class="mascot-icon">
+        </div>
+        <h3>{t('services.equitalia')}</h3>
+        <p>{t('services.equitalia.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-comune`} class="service-card animate-on-scroll from-left">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.municipality')} class="mascot-icon">
+        </div>
+        <h3>{t('services.municipality')}</h3>
+        <p>{t('services.municipality.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-catastali`} class="service-card animate-on-scroll from-right">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.cadastral')} class="mascot-icon">
+        </div>
+        <h3>{t('services.cadastral')}</h3>
+        <p>{t('services.cadastral.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}pratiche-giudice-pace`} class="service-card animate-on-scroll from-left">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.justice')} class="mascot-icon">
+        </div>
+        <h3>{t('services.justice')}</h3>
+        <p>{t('services.justice.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}servizi-digitali`} class="service-card animate-on-scroll from-right">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.digital')} class="mascot-icon">
+        </div>
+        <h3>{t('services.digital')}</h3>
+        <p>{t('services.digital.desc')}</p>
+      </a>
+      
+      <a href={`/${lang === 'it' ? '' : 'en/'}digipram`} class="service-card animate-on-scroll from-left">
+        <div class="service-icon">
+          <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt={t('services.digipram')} class="mascot-icon">
+        </div>
+        <h3>{t('services.digipram')}</h3>
+        <p>{t('services.digipram.desc')}</p>
+      </a>
+    </div>
+    <div class="services-cta animate-on-scroll">
+      <p>{t('services.cta.text')}</p>
+      <a href={`/${lang === 'it' ? '' : 'en/'}contattaci`} class="btn">{t('services.cta.button')}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+  }
+  
+  .service-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .service-icon img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .service-icon .mascot-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover .mascot-icon {
+    transform: scale(1.1);
+  }
+  
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .service-card p {
+    color: var(--text-color);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+  
+  .services-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .services-cta p {
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 992px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

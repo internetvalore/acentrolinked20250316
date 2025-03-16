@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Equitalia Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Equitalia Practices" 
+    description="Complete solutions for all Equitalia practices"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Administrative practice agencies in Milan, including <strong>Acentro Services</strong>, offer various services related to <strong>Equitalia</strong>. 
+          Acentro Services provides support for managing formalities and compliance with public administration entities.
+        </p>
+        <p>
+          Here is a detailed list of services offered for Equitalia:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Equitalia Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Tax Collection" 
+            description="Complete assistance for managing tax collection procedures with Equitalia."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Installment Plan Request Preparation and Submission" 
+            description="Support in preparing and submitting installment plan requests for tax bills."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Tax Bill Payment" 
+            description="Assistance with tax bill payments and verification of correct debt settlement."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Various Pending Charges Verification" 
+            description="Complete check of debt position at Equitalia and analysis of any pending charges."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Tax Bill Duplicate Printing" 
+            description="Support in obtaining duplicates of lost or unreceived tax bills."
+            icon="/images/service-icon-2.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Related Digital Services</h3>
+        <p>
+          Acentro Services also offers digital services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>, 
+          which are useful tools for simplifying operational processes related to communication with Equitalia.
+        </p>
+        
+        <h3>DIGIPRAM: The Management Software for Administrative Practices</h3>
+        <p>
+          Additionally, Acentro Services provides DIGIPRAM, a management software designed for administrative practice agencies, 
+          which facilitates practice management and offers features such as document management.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your Equitalia practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify the management of your tax bills.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

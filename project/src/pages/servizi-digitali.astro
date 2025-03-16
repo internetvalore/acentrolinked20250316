@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Servizi Digitali - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Servizi Digitali" 
+    description="Soluzioni digitali per semplificare i tuoi processi amministrativi"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Acentro Services offre una gamma di servizi digitali progettati per semplificare e ottimizzare i tuoi processi amministrativi.
+        </p>
+        <p>
+          Scopri i nostri servizi digitali:
+        </p>
+      </div>
+      
+      <div class="service-boxes">
+        <ServiceDetailBox 
+          title="Firma Digitale" 
+          description="La Firma Digitale è uno strumento indispensabile per firmare documenti digitalmente con valore legale."
+          icon="/images/service-icon-2.svg"
+          link="/contattaci"
+        />
+        
+        <ServiceDetailBox 
+          title="Posta Elettronica Certificata (PEC)" 
+          description="La PEC è un sistema di posta elettronica che garantisce la certezza dell'invio e della ricezione dei messaggi."
+          icon="/images/service-icon-3.svg"
+          link="/contattaci"
+        />
+        
+        <ServiceDetailBox 
+          title="Fatturazione Elettronica" 
+          description="La Fatturazione Elettronica è obbligatoria per molte aziende e professionisti. Offriamo supporto per l'emissione e la ricezione di fatture elettroniche."
+          icon="/images/service-icon-1.svg"
+          link="/contattaci"
+        />
+        
+        <ServiceDetailBox 
+          title="Conservazione Digitale" 
+          description="La Conservazione Digitale a norma di legge garantisce la validità nel tempo dei tuoi documenti digitali."
+          icon="/images/service-icon-2.svg"
+          link="/contattaci"
+        />
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>DIGIPRAM: Il Gestionale per le Pratiche Amministrative</h3>
+        <p>
+          Acentro Services mette a disposizione il gestionale <strong>DIGIPRAM</strong>, pensato per le agenzie di pratiche amministrative, 
+          che facilita la gestione delle pratiche e offre funzionalità come la gestione documentale e l'integrazione con i servizi digitali.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per i nostri servizi digitali?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare i tuoi processi amministrativi.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,351 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Justice of Peace Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Justice of Peace Practices" 
+    description="Complete assistance for all practices at the Justice of Peace office"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offers complete assistance for <strong>practices at the Justice of Peace</strong>, 
+          supporting individuals and professionals in managing all necessary formalities.
+        </p>
+        <p>
+          Our team of experts handles every procedural aspect, ensuring efficiency and professionalism at every stage.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Civil Case Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="File Preparation" 
+            description="Complete preparation of documentation necessary for initiating civil proceedings at the Justice of Peace."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Document Filing" 
+            description="Service for filing appeals, briefs, and documents with the Justice of Peace registry, with verification of correct receipt."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Payment Order Monitoring" 
+            description="Constant monitoring of payment order status, with timely updates to the client."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Notifications" 
+            description="Complete management of judicial document notification procedures, ensuring compliance with legal terms and methods."
+            icon="/images/service-icon-1.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Opposition Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Administrative Sanctions Opposition" 
+            description="Assistance in preparing and filing appeals against fines and administrative sanctions, with preliminary documentation analysis."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Tax Bill Opposition" 
+            description="Complete support for contesting payment notices issued by collection agencies, with verification of claim legitimacy."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Condominium Disputes" 
+            description="Assistance in managing condominium disputes under the Justice of Peace's jurisdiction, with preparation of necessary documentation."
+            icon="/images/service-icon-1.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Preliminary Consultation</h3>
+        <p>
+          We offer a preliminary consultation service to evaluate the feasibility and chances of success for actions to be taken at the Justice of Peace.
+          Our team analyzes available documentation and provides professional advice on the most effective strategies to adopt.
+        </p>
+        
+        <h3>Digital Assistance</h3>
+        <p>
+          Acentro Services also supports clients in digital practice management, offering services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>,
+          essential tools for communication with judicial offices.
+        </p>
+      </div>
+      
+      <div class="service-process">
+        <h3>How Our Service Works</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Preliminary Analysis</h4>
+              <p>We evaluate the documentation and define the most effective strategy for your case.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Documentation Preparation</h4>
+              <p>We prepare all necessary documents according to current regulations.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Filing and Notifications</h4>
+              <p>We handle document filing and any necessary notifications.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Monitoring and Updates</h4>
+              <p>We follow the practice's evolution and keep you constantly updated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-benefits">
+        <h3>Benefits of our service</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <h4>Operational efficiency</h4>
+            <p>Practice management time reduction and streamlining of administrative processes.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Specialized expertise</h4>
+            <p>Our team has specific experience in Justice of Peace procedures.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Constant monitoring</h4>
+            <p>We keep track of your practices' progress with regular updates.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Maximum precision</h4>
+            <p>We ensure correct compilation and timely filing of all necessary documents.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with practices at the Justice of Peace?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you effectively manage your legal practices.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-process {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-process h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-benefits {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-benefits h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .benefit-item {
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-content {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

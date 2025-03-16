@@ -1,0 +1,20 @@
+/* Base animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.from-left {
+  transform: translateX(-100px);
+}
+
+.animate-on-scroll.from-right {
+  transform: translateX(100px);
+}
+
+/* Animation class when element becomes visible */
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateX(0);
+}

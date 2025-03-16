@@ -1,0 +1,168 @@
+---
+import '../styles/animations.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="it">
+	<head>
+		<!-- Google Tag Manager -->
+		<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-M4FB4C25');
+		</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="UTF-8" />
+		<meta name="description" content="Acentro Services - Soluzioni rapide ed efficienti per imprese e professionisti" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4FB4C25"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<slot />
+		<script>
+			// Function to handle scroll animations
+			function handleScrollAnimations() {
+				const animatedElements = document.querySelectorAll('.animate-on-scroll');
+				
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('show');
+						}
+					});
+				}, {
+					threshold: 0.1,
+					rootMargin: '0px 0px -50px 0px'
+				});
+				
+				animatedElements.forEach(element => {
+					observer.observe(element);
+				});
+			}
+
+			// Initialize animations when DOM is loaded
+			document.addEventListener('DOMContentLoaded', () => {
+				handleScrollAnimations();
+			});
+
+			// Re-initialize animations when navigating between pages (for Astro's view transitions)
+			document.addEventListener('astro:page-load', () => {
+				handleScrollAnimations();
+			});
+		</script>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary-color: #0066a1;
+		--secondary-color: #0088cc;
+		--accent-color: #e84c3d;
+		--text-color: #333333;
+		--light-bg: #f5f7fa;
+		--medium-bg: #e1e8ed;
+		--dark-bg: #2c3e50;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		font-family: 'Roboto', system-ui, sans-serif;
+		background: white;
+		color: var(--text-color);
+		scroll-behavior: smooth;
+	}
+	body {
+		line-height: 1.6;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+	p {
+		margin-bottom: 1rem;
+	}
+	a {
+		color: var(--secondary-color);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	a:hover {
+		color: var(--accent-color);
+	}
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	.btn {
+		display: inline-block;
+		background-color: var(--accent-color);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: 4px;
+		font-weight: 500;
+		text-align: center;
+		transition: background-color 0.3s ease;
+	}
+	.btn:hover {
+		background-color: #d13c2e;
+		color: white;
+	}
+	.btn-primary {
+		background-color: var(--primary-color);
+	}
+	.btn-primary:hover {
+		background-color: #005080;
+	}
+	.section {
+		padding: 4rem 0;
+	}
+	.section-title {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.section-title h2 {
+		font-size: 2.5rem;
+		position: relative;
+		display: inline-block;
+		padding-bottom: 1rem;
+	}
+	.section-title h2::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 3px;
+		background-color: var(--accent-color);
+	}
+	@media (max-width: 768px) {
+		.section {
+			padding: 3rem 0;
+		}
+		.section-title h2 {
+			font-size: 2rem;
+		}
+	}
+</style>

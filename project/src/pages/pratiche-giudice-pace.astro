@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche Giudice di Pace - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche Giudice di Pace" 
+    description="Soluzioni complete per tutte le pratiche relative al Giudice di Pace"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Le agenzie di disbrigo pratiche amministrative a Milano, inclusa <strong>Acentro Services</strong>, offrono diversi servizi relativi al <strong>Giudice di Pace</strong>. 
+          Acentro Services si propone come supporto per la gestione di formalità e adempimenti verso enti e pubbliche amministrazioni.
+        </p>
+        <p>
+          Ecco una lista dettagliata dei servizi offerti per il Giudice di Pace:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi Giudice di Pace</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Assistenza legale" 
+            description="Forniamo assistenza legale per controversie di competenza del Giudice di Pace."
+            icon="/images/service-icon-1.svg"
+            link="/contattaci"
+          />
+          
+          <ServiceDetailBox 
+            title="Ricorsi" 
+            description="Supporto nella preparazione e presentazione di ricorsi al Giudice di Pace."
+            icon="/images/service-icon-2.svg"
+            link="/contattaci"
+          />
+          
+          <ServiceDetailBox 
+            title="Conciliazioni" 
+            description="Assistenza nelle procedure di conciliazione per risolvere controversie in via stragiudiziale."
+            icon="/images/service-icon-3.svg"
+            link="/contattaci"
+          />
+          
+          <ServiceDetailBox 
+            title="Decreti ingiuntivi" 
+            description="Supporto per l'ottenimento di decreti ingiuntivi per il recupero crediti."
+            icon="/images/service-icon-1.svg"
+            link="/contattaci"
+          />
+          
+          <ServiceDetailBox 
+            title="Citazioni" 
+            description="Supporto nella preparazione e notifica di atti di citazione."
+            icon="/images/service-icon-2.svg"
+            link="/contattaci"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Servizi Digitali Correlati</h3>
+        <p>
+          Acentro Services offre anche servizi digitali come la <strong>Firma Digitale</strong> e la <strong>Posta Elettronica Certificata (PEC)</strong>, 
+          che sono strumenti utili per semplificare i processi operativi legati alla comunicazione con il Giudice di Pace.
+        </p>
+        
+        <h3>DIGIPRAM: Il Gestionale per le Pratiche Amministrative</h3>
+        <p>
+          Inoltre, Acentro Services mette a disposizione il gestionale <strong>DIGIPRAM</strong>, pensato per le agenzie di pratiche amministrative, 
+          che facilita la gestione delle pratiche e offre funzionalità come la gestione documentale.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per le tue pratiche con il Giudice di Pace?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare i tuoi adempimenti amministrativi.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

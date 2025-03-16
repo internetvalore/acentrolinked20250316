@@ -1,0 +1,421 @@
+---
+import LanguageSelector from './LanguageSelector.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href={lang === 'it' ? '/' : '/en'}>
+          <img src="https://www.acentroservices.it/wp-content/uploads/2024/04/Logo-AcentroServices.gif" alt="Acentro Services Logo">
+        </a>
+      </div>
+      <div class="mascot">
+        <img src="https://leprimescelte.com/wp-content/uploads/2025/03/mascotte_icon.png" alt="Acentro Services Mascot">
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href={lang === 'it' ? '/' : '/en'}>{t('nav.home')}</a></li>
+          <li class="has-submenu">
+            <a href="#" class="submenu-toggle">{t('nav.services')}</a>
+            <ul class="submenu">
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-camera-commercio`}>{t('services.chamber')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-agenzia-entrate`}>{t('services.revenue')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-inps-inail`}>{t('services.inps')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-equitalia`}>{t('services.equitalia')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-comune`}>{t('services.municipality')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-catastali`}>{t('services.cadastral')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}pratiche-giudice-pace`}>{t('services.justice')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}servizi-digitali`}>{t('services.digital')}</a></li>
+              <li><a href={`/${lang === 'it' ? '' : 'en/'}digipram`}>{t('services.digipram')}</a></li>
+            </ul>
+          </li>
+          <li><a href={`/${lang === 'it' ? '' : 'en/'}chi-siamo`}>{t('nav.about')}</a></li>
+          <li><a href={`/${lang === 'it' ? '' : 'en/'}perche-noi`}>{t('nav.why')}</a></li>
+          <li><a href={`/${lang === 'it' ? '' : 'en/'}contattaci`}>{t('nav.contact')}</a></li>
+        </ul>
+      </nav>
+      <div class="contact-info">
+        <a href="tel:0238003661" class="phone">02.38003661</a>
+        <a href="mailto:acentroservices@acentroservices.it" class="email">acentroservices@acentroservices.it</a>
+      </div>
+      <LanguageSelector />
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .mascot {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mascot img {
+    height: 60px;
+    width: auto;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav li {
+    margin-left: 1.5rem;
+    position: relative;
+  }
+  
+  .main-nav a {
+    color: var(--primary-color);
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .main-nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  
+  .main-nav > ul > li > a:hover::after {
+    width: 100%;
+  }
+  
+  .has-submenu {
+    position: relative;
+  }
+  
+  .submenu-toggle::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 250px;
+    padding: 1rem 0;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+  
+  .submenu li {
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .submenu a {
+    color: var(--primary-color);
+    font-weight: 400;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  .submenu a:hover {
+    color: var(--accent-color);
+  }
+  
+  @media (min-width: 769px) {
+    .has-submenu.hover-submenu .submenu {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .has-submenu.show-submenu .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .contact-info .phone,
+  .contact-info .email {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 992px) {
+    .contact-info {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 1rem 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .main-nav.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .main-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .main-nav li {
+      margin: 0.5rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .submenu {
+      position: static;
+      box-shadow: none;
+      padding: 0.5rem 0;
+      width: 100%;
+    }
+    
+    .submenu li {
+      padding: 0.25rem 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .mascot {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Function to initialize menu behavior
+  function initMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
+    
+    // Reset all menu states first
+    function resetMenuStates() {
+      hasSubmenuItems.forEach(item => {
+        item.classList.remove('show-submenu');
+        item.classList.remove('hover-submenu');
+      });
+    }
+    
+    // Mobile menu toggle
+    mobileMenuToggle?.addEventListener('click', () => {
+      mobileMenuToggle.classList.toggle('active');
+      mainNav?.classList.toggle('active');
+    });
+    
+    // Set up menu behavior based on screen size
+    function setupMenuBehavior() {
+      // For mobile: click to toggle
+      if (window.innerWidth <= 768) {
+        submenuToggles.forEach(toggle => {
+          // Remove existing event listeners by cloning and replacing
+          const parent = toggle.parentNode;
+          if (parent) {
+            const newToggle = toggle.cloneNode(true);
+            parent.replaceChild(newToggle, toggle);
+            
+            // Add new event listener to the new element
+            newToggle.addEventListener('click', (e) => {
+              e.preventDefault();
+              const menuParent = newToggle.closest('.has-submenu');
+              
+              if (menuParent) {
+                // If already open, close it
+                if (menuParent.classList.contains('show-submenu')) {
+                  menuParent.classList.remove('show-submenu');
+                } else {
+                  // Close all other submenus first
+                  resetMenuStates();
+                  // Then open this one
+                  menuParent.classList.add('show-submenu');
+                }
+              }
+            });
+          }
+        });
+      } else {
+        // Desktop behavior: hover to show
+        hasSubmenuItems.forEach(item => {
+          // Clear any existing classes first
+          item.classList.remove('show-submenu');
+          
+          // Add mouseenter event
+          item.addEventListener('mouseenter', () => {
+            resetMenuStates();
+            item.classList.add('hover-submenu');
+          });
+          
+          // Add mouseleave event
+          item.addEventListener('mouseleave', () => {
+            item.classList.remove('hover-submenu');
+          });
+          
+          // Prevent default on submenu toggle click for desktop
+          const toggle = item.querySelector('.submenu-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', (e) => {
+              e.preventDefault();
+            });
+          }
+        });
+      }
+    }
+    
+    // Set up initial behavior
+    if (submenuToggles.length > 0) {
+      setupMenuBehavior();
+    }
+    
+    // Close submenu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-submenu')) {
+        resetMenuStates();
+      }
+    });
+    
+    // Close submenu when clicking on a submenu link
+    const submenuLinks = document.querySelectorAll('.submenu a');
+    submenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        resetMenuStates();
+        // Also close mobile menu if open
+        mobileMenuToggle?.classList.remove('active');
+        mainNav?.classList.remove('active');
+      });
+    });
+    
+    // Update behavior on window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        resetMenuStates();
+        setupMenuBehavior();
+      }, 250);
+    });
+  }
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', initMenu);
+  
+  // Re-initialize when navigating between pages (for Astro's view transitions)
+  document.addEventListener('astro:page-load', initMenu);
+  
+  // Ensure menu is closed when page loads
+  window.addEventListener('load', () => {
+    const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+    hasSubmenuItems.forEach(item => {
+      item.classList.remove('show-submenu');
+      item.classList.remove('hover-submenu');
+    });
+  });
+</script>

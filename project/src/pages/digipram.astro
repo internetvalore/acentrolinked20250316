@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="DIGIPRAM - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="DIGIPRAM" 
+    description="Il gestionale per le agenzie di pratiche amministrative"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          DIGIPRAM è il gestionale pensato per le agenzie di pratiche amministrative, che facilita la gestione delle pratiche e offre funzionalità come la gestione documentale.
+        </p>
+        <p>
+          Scopri le funzionalità di DIGIPRAM:
+        </p>
+      </div>
+      
+      <div class="service-boxes">
+        <ServiceDetailBox 
+          title="Gestione documentale" 
+          description="DIGIPRAM offre funzionalità avanzate per la gestione documentale, consentendoti di archiviare e organizzare i tuoi documenti in modo efficiente."
+          icon="/images/service-icon-3.svg"
+          link="/contattaci"
+        />
+        
+        <ServiceDetailBox 
+          title="Integrazione con la fatturazione elettronica" 
+          description="DIGIPRAM si integra con la fatturazione elettronica, consentendoti di emettere e ricevere fatture elettroniche in modo semplice e veloce."
+          icon="/images/service-icon-1.svg"
+          link="/contattaci"
+        />
+        
+        <ServiceDetailBox 
+          title="Gestione delle pratiche" 
+          description="DIGIPRAM ti aiuta a gestire le pratiche amministrative in modo efficiente, consentendoti di tenere traccia dello stato di avanzamento delle pratiche e di rispettare le scadenze."
+          icon="/images/service-icon-2.svg"
+          link="/contattaci"
+        />
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Servizi Digitali Correlati</h3>
+        <p>
+          Acentro Services offre anche servizi digitali come la <strong>Firma Digitale</strong> e la <strong>Posta Elettronica Certificata (PEC)</strong>, 
+          che sono strumenti utili per semplificare i processi operativi legati alla comunicazione con le pubbliche amministrazioni.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Sei interessato a DIGIPRAM?</h3>
+        <p>Contattaci per una demo gratuita e scopri come DIGIPRAM può aiutarti a semplificare la gestione delle tue pratiche amministrative.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

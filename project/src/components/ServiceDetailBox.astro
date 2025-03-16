@@ -1,0 +1,129 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link?: string;
+}
+
+const { title, description, icon, link } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Determine the correct contact page URL based on the current language
+const contactUrl = lang === 'en' ? "/en/contattaci" : "/contattaci";
+const finalLink = link || contactUrl;
+
+// Get the correct text for the button based on language
+const contactText = lang === 'en' ? "Contact Us" : "Contattaci";
+---
+
+<a href={finalLink} class="service-detail-link">
+  <div class="service-detail-box animate-on-scroll">
+    <div class="service-detail-icon">
+      <img src={icon} alt={title}>
+    </div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="service-detail-action">
+      <span class="read-more">{contactText}</span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .service-detail-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  
+  .service-detail-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .service-detail-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-detail-icon {
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-detail-icon img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .service-detail-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .service-detail-box p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+  }
+  
+  .service-detail-action {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .read-more {
+    color: var(--accent-color);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .service-detail-box:hover .read-more {
+    color: var(--primary-color);
+  }
+  
+  .service-detail-box:hover .read-more::after {
+    transform: translateX(5px);
+  }
+</style>
+
+<script>
+// Add alternating animation classes to service boxes
+document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.service-detail-box');
+  boxes.forEach((box, index) => {
+    box.classList.add(index % 2 === 0 ? 'from-left' : 'from-right');
+  });
+});
+
+// Re-run for Astro view transitions
+document.addEventListener('astro:page-load', () => {
+  const boxes = document.querySelectorAll('.service-detail-box');
+  boxes.forEach((box, index) => {
+    box.classList.add(index % 2 === 0 ? 'from-left' : 'from-right');
+  });
+});
+</script>

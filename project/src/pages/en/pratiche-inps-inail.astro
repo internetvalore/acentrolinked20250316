@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="INPS and INAIL Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="INPS and INAIL Practices" 
+    description="Complete solutions for all INPS and INAIL practices"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Administrative practice agencies in Milan, including <strong>Acentro Services</strong>, offer various services related to <strong>INPS</strong> and <strong>INAIL</strong>. 
+          Acentro Services provides support for managing formalities and compliance with public administration entities.
+        </p>
+        <p>
+          Here is a detailed list of services offered for INPS and INAIL:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>INPS Practices</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Position and Termination Verification Access" 
+            description="Support for verifying contribution positions and terminations at INPS."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Unified Certification Model Duplicates" 
+            description="Assistance in obtaining duplicates of the Unified Certification (former CUD)."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Tax Bills and Payment Notice Verification" 
+            description="Control and verification of tax bills and payment notices issued by INPS."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="F24 Form Duplicate for Artisans and Traders" 
+            description="Support in obtaining duplicates of F24 forms for artisans and traders' contributions."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="DURC Certificates" 
+            description="Assistance in obtaining the Single Document of Contribution Regularity."
+            icon="/images/service-icon-1.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>INAIL Practices</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Tax Bills and Payment Notice Verification" 
+            description="Control and verification of tax bills and payment notices issued by INAIL."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Regularizations" 
+            description="Support for regularizing contribution positions at INAIL."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Related Digital Services</h3>
+        <p>
+          Acentro Services also offers digital services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>, 
+          which are useful tools for simplifying operational processes related to communication with INPS and INAIL.
+        </p>
+        
+        <h3>DIGIPRAM: The Management Software for Administrative Practices</h3>
+        <p>
+          Additionally, Acentro Services provides DIGIPRAM, a management software designed for administrative practice agencies, 
+          which facilitates practice management and offers features such as document management.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your INPS and INAIL practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify your social security and insurance compliance.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

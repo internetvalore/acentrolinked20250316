@@ -1,0 +1,232 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Revenue Agency Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Revenue Agency Practices" 
+    description="Complete solutions for all Revenue Agency practices"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          Administrative practice agencies in Milan, including <strong>Acentro Services</strong>, offer various services related to the <strong>Revenue Agency</strong>. 
+          Acentro Services provides support for managing formalities and compliance with public administration entities.
+        </p>
+        <p>
+          Here is a detailed list of services offered:
+        </p>
+      </div>
+      
+      <div class="service-boxes">
+        <ServiceDetailBox 
+          title="Tax Management, Assessment, and Disputes" 
+          description="Verification of payment notices and tax bills to resolve tax issues."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="VAT Number Assignment, Modification, or Termination" 
+          description="Complete support for opening, modifying, or closing a business VAT number."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Tax Code Assignment" 
+          description="Assistance in obtaining tax codes for individuals and legal entities."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Lease Contract Registration and Termination" 
+          description="Complete management of rental contract registration and termination practices."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Subsequent Years Payments and Extensions" 
+          description="Assistance with periodic payments and extensions related to registered contracts."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Acts/Minutes Registration" 
+          description="Support for registering acts and minutes with the Revenue Agency."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="VAT and/or Double Taxation Certificates" 
+          description="Obtaining certifications related to VAT and double taxation."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Tax Compliance Certificates" 
+          description="Request and obtaining of certificates attesting taxpayer's tax compliance."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Tax Pending Charges Certificates" 
+          description="Assistance in obtaining certificates related to pending tax charges."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Revenue Agency Registrations and Changes" 
+          description="Support for registration and data change procedures at the Revenue Agency."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Contract Registration" 
+          description="Complete assistance for registering various types of contracts."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Dividend Distribution Minutes Registration" 
+          description="Support for registering corporate dividend distribution minutes."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Tax Data Change Reports" 
+          description="Assistance in submitting reports related to tax data changes."
+          icon="/images/service-icon-2.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Revenue Agency and Equitalia Pending Charges Certificates" 
+          description="Obtaining certifications related to pending charges at Revenue Agency and Equitalia."
+          icon="/images/service-icon-3.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="Lease Contract and Online Renewal Schedule" 
+          description="Digital management of lease contracts with reminder system for renewals."
+          icon="/images/service-icon-1.svg"
+        />
+        
+        <ServiceDetailBox 
+          title="VAT Number Issuance" 
+          description="Complete assistance in obtaining VAT numbers for new businesses."
+          icon="/images/service-icon-2.svg"
+        />
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Related Digital Services</h3>
+        <p>
+          Acentro Services also offers digital services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>, 
+          which are useful tools for simplifying operational processes related to communication with the Revenue Agency.
+        </p>
+        
+        <h3>Electronic Invoicing</h3>
+        <p>
+          Additionally, we can provide assistance with electronic invoicing, which is mandatory for flat-rate taxpayers with revenues 
+          or fees exceeding €25,000 in 2021 and will be mandatory for all from 2024.
+        </p>
+        
+        <h3>DIGIPRAM: The Management Software for Administrative Practices</h3>
+        <p>
+          Acentro Services provides DIGIPRAM, a management software designed for administrative practice agencies, 
+          which facilitates practice management and offers features such as integration with electronic invoicing and document management.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your Revenue Agency practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify your tax compliance.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

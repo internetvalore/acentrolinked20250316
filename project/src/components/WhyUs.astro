@@ -1,0 +1,198 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="perche-noi" class="section why-us-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>{t('whyUs.title')}</h2>
+    </div>
+    
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <text x="24" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#0066a1" text-anchor="middle">30+</text>
+          </svg>
+        </div>
+        <h3>{t('whyUs.experience.title')}</h3>
+        <p>{t('whyUs.experience.desc')}</p>
+      </div>
+      
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <rect x="14" y="14" width="20" height="20" fill="#0066a1"/>
+            <rect x="18" y="18" width="12" height="12" fill="white"/>
+          </svg>
+        </div>
+        <h3>{t('whyUs.services.title')}</h3>
+        <p>{t('whyUs.services.desc')}</p>
+      </div>
+      
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <path d="M16 24a8 8 0 1 1 16 0 8 8 0 0 1-16 0z" fill="#0066a1"/>
+            <path d="M24 16v8l4 4" stroke="white" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>{t('whyUs.efficiency.title')}</h3>
+        <p>{t('whyUs.efficiency.desc')}</p>
+      </div>
+      
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <path d="M16 32c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#0066a1"/>
+            <circle cx="24" cy="18" r="6" fill="#0066a1"/>
+          </svg>
+        </div>
+        <h3>{t('whyUs.support.title')}</h3>
+        <p>{t('whyUs.support.desc')}</p>
+      </div>
+      
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <path d="M16 24l6 6 10-10" stroke="#0066a1" stroke-width="4" fill="none"/>
+          </svg>
+        </div>
+        <h3>{t('whyUs.solutions.title')}</h3>
+        <p>{t('whyUs.solutions.desc')}</p>
+      </div>
+      
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#e1e8ed"/>
+            <path d="M14 20h20v12H14z" fill="#0066a1"/>
+            <path d="M18 24h12M18 28h8" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>{t('whyUs.updates.title')}</h3>
+        <p>{t('whyUs.updates.desc')}</p>
+      </div>
+    </div>
+    
+    <div class="testimonials">
+      <h3>{t('testimonials.title')}</h3>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <p>{t('testimonials.1.text')}</p>
+          <div class="testimonial-author">{t('testimonials.1.author')}</div>
+        </div>
+        <div class="testimonial">
+          <p>{t('testimonials.2.text')}</p>
+          <div class="testimonial-author">{t('testimonials.2.author')}</div>
+        </div>
+        <div class="testimonial">
+          <p>{t('testimonials.3.text')}</p>
+          <div class="testimonial-author">{t('testimonials.3.author')}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-us-section {
+    background-color: var(--light-bg);
+  }
+  
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .advantage-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .advantage-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .advantage-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .advantage-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .testimonials {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .testimonials h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .testimonial {
+    min-width: 300px;
+    scroll-snap-align: start;
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-author {
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 992px) {
+    .advantages-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .advantages-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .testimonial {
+      min-width: 100%;
+    }
+  }
+</style>

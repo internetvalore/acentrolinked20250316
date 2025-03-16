@@ -1,0 +1,513 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Digital Services - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Digital Services" 
+    description="Advanced digital solutions to streamline operational processes and simplify communication with Public Administration"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offers a complete range of <strong>digital services</strong> that play a crucial role in streamlining operational processes 
+          related to communication with end customers and Public Administration.
+        </p>
+        <p>
+          Our team of experts supports you in adopting and using essential digital tools for your professional activity, 
+          ensuring complete and personalized assistance.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Communication and Authentication Tools</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Certified Email (PEC)" 
+            description="Communication system with legal validity that replaces traditional email for important communications, ensuring traceability and enforceability against third parties."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Digital Signature" 
+            description="Legal tool that allows you to revise the business organization related to document and process management, ensuring content authenticity."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Public Digital Identity System (SPID)" 
+            description="Authentication system that allows citizens and businesses to access online services of public administration and participating private entities with a unique digital identity."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Document and Tax Management</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Electronic Invoicing" 
+            description="Complete support in transitioning to electronic invoicing, with platforms for sending/receiving and services for preparing active invoices, ensuring quality and ease of use."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Substitute Storage" 
+            description="Service that allows dematerializing paper documents or producing exclusively digital documents, giving them legal validity and preserving them according to law."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="National Environmental Managers Register" 
+            description="Complete assistance for managing registration requests to the National Environmental Managers Register, simplifying an otherwise complex process."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Details of Our Digital Services</h3>
+        
+        <div class="service-detail-item">
+          <h4>Certified Email (PEC)</h4>
+          <p>
+            PEC is essential for legally compliant communication with businesses and for meeting needs such as:
+          </p>
+          <ul>
+            <li>Participation in tenders</li>
+            <li>Sending invoices and legal documents</li>
+            <li>Communications with value of simple registered mail or return receipt</li>
+          </ul>
+          <p>
+            Acentro Services operates in the territory not only for PEC provision but also for continuous assistance and consultation.
+          </p>
+        </div>
+        
+        <div class="service-detail-item">
+          <h4>Digital Signature</h4>
+          <p>
+            Acentro Services acts as a Registration Office, a qualified entity authorized by the Certification Authority to issue signatures. Digital signature is useful for:
+          </p>
+          <ul>
+            <li>Signing SUAP practices</li>
+            <li>Signing lease or supply contracts</li>
+            <li>Approving meeting minutes</li>
+            <li>Managing automatic authorization processes</li>
+          </ul>
+          <p>
+            Unlike handwritten signatures, digital signatures cannot be disowned (except through specific legal actions).
+          </p>
+        </div>
+        
+        <div class="service-detail-item">
+          <h4>Public Digital Identity System (SPID)</h4>
+          <p>
+            Acentro Services is an authorized SPID issuance center and assists users in both registration and identification phases. To request SPID, you need:
+          </p>
+          <ul>
+            <li>To be adult Italian citizens or have a residence permit and reside in Italy</li>
+            <li>Have a valid ID document and health card</li>
+            <li>Have a personal email and phone number</li>
+          </ul>
+        </div>
+        
+        <div class="service-detail-item">
+          <h4>Electronic Invoicing</h4>
+          <p>
+            Since July 1, 2022, electronic invoicing has become mandatory for flat-rate taxpayers with revenues or fees exceeding €25,000 in 2021 (mandatory for all from 2024). Our services include:
+          </p>
+          <ul>
+            <li>Platforms for sending/receiving electronic invoices</li>
+            <li>Services for preparing and sending active invoices</li>
+            <li>Complete support in transitioning to electronic invoicing</li>
+          </ul>
+        </div>
+        
+        <div class="service-detail-item">
+          <h4>Substitute Storage</h4>
+          <p>
+            You can store fiscal and administrative documents such as:
+          </p>
+          <ul>
+            <li>General Ledger</li>
+            <li>Single Employment Ledger (LUL)</li>
+            <li>Active and passive invoicing cycle</li>
+          </ul>
+          <p>
+            Acentro Services supports clients in this transition, ensuring quality, certainty, immediacy, ease of use, and contained costs.
+          </p>
+        </div>
+      </div>
+      
+      <div class="service-process">
+        <h3>How Our Service Works</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Initial Consultation</h4>
+              <p>We analyze your digital needs and recommend the most suitable solutions for your business.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Service Activation</h4>
+              <p>We manage all activation procedures for chosen digital services, handling every bureaucratic aspect.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Training and Support</h4>
+              <p>We provide necessary training to best use activated services and continuous support.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Ongoing Assistance</h4>
+              <p>We remain available to resolve any issues or doubts related to activated digital services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-benefits">
+        <h3>Benefits of Digital Services</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <h4>Operational efficiency</h4>
+            <p>Reduction in practice management times and streamlining of administrative processes.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Legal validity</h4>
+            <p>Documents and communications with full legal value, enforceable against third parties and compliant with regulations.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Cost savings</h4>
+            <p>Reduction in costs related to paper management and document sending through traditional postal services.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Environmental sustainability</h4>
+            <p>Less use of paper and physical resources, contributing to reducing environmental impact.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="digipram-section">
+        <h3>DIGIPRAM: The Management Software for Practice Agencies</h3>
+        <p>
+          In addition to standard digital services, Acentro Services provides <strong>DIGIPRAM</strong>, a management software specifically designed for administrative practice agencies.
+        </p>
+        <div class="digipram-features">
+          <div class="feature-item">
+            <h4>Practice Management</h4>
+            <p>Efficient organization of all administrative practices with progress monitoring.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Invoicing Integration</h4>
+            <p>Complete integration with electronic invoicing systems for simplified accounting management.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Document Management</h4>
+            <p>Archiving and organization of all practice-related documents in a single system.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Advanced Reporting</h4>
+            <p>Generation of detailed reports on practice progress and agency activity.</p>
+          </div>
+        </div>
+        <p class="digipram-cta">
+          Discover how DIGIPRAM can revolutionize your administrative practice agency management!
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need support with digital services?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you digitize your business efficiently and in compliance with regulations.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .service-detail-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--medium-bg);
+  }
+  
+  .service-detail-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .service-detail-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .service-detail-item ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-detail-item li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-process {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-process h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-benefits {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-benefits h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .benefit-item {
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .digipram-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .digipram-section h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .digipram-section > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .digipram-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-item {
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .digipram-cta {
+    font-weight: bold;
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid,
+    .digipram-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-content {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
